@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <link rel="stylesheet" href="stylingWT.css">
+        <title>Welcome to the Customs store</title>
+        <h1 class="rectangleheader">Customs Store</h1>
+    </head>
+    <body>
+        <div class="rectangle">
+        <form action="https://localhost/WT-project/login.php" method="POST">
+            <label><b>Email address</b></label><br>
+            <input type="text" id="email" name="email" class="firstlarge"><br>
+            <label><b>Password</b></label><br>
+            <input type="password" id="password" name="password" class="firstlarge"><br/>
+            <input type="submit" id="signin" name="signin" value="Login" class="firstlarge" style="width: 30%;" onclick="savemail()"><br/>
+            <label>New User?</label>
+            <input type="button" value="Sign Up" id="signup" name="signup" onclick="window.location='secondpage.html'" style="font-size: 150%; margin-left: 1%; margin-top: 5%;">
+        </form>  
+        </div>  
+        <script type="text/javascript">
+            function savemail(){
+                var mail = document.getElementById("email").value;
+                localStorage.setItem("mail",mail);
+            }
+        </script>    
+    </body>
+</html>
